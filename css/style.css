@@ -1,0 +1,138 @@
+
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+body{
+    overflow-x: hidden;
+    background-color: #333;
+    color: #222;
+}
+
+.container{
+    background-color: #fafafa;
+    transform-origin: top left;
+    transition: transform 0.5s linear;
+    width: 100vw;
+    min-height: 100vh;
+    padding: 50px;
+}
+.content h1{
+    margin-top: 40px;
+}
+.container.show-nav{
+    transform: rotate(-20deg);
+}
+
+.container.show-nav + nav li {
+    transform: translateX(150%);
+    transition-delay: .4s;
+}
+
+.circle-container{
+    position: fixed;
+    top: -100px;
+    left: -100px;
+}
+
+.circle{
+    background-color: rgb(43, 174, 226);
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    position: relative;
+    transition: transform 0.5s linear;
+}
+
+.circle button{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border: none;
+    color: white;
+    height: 100px;
+    background: transparent;
+    font-size: 26px;
+}
+
+.circle button:focus {
+    outline: none;
+}
+
+.circle button#open{
+    left: 60%;
+}
+
+.circle button#close {
+    top: 60%;
+    transform: rotate(90deg);
+    transform-origin: top left;
+}
+
+.container.show-nav .circle {
+    transform: rotate(-70deg);
+}
+.content img{
+    max-width: 100%;
+    margin: 20px 0px;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+}
+
+.content {
+    max-width: 1000px;
+    margin: 50px auto;
+}
+
+.content small {
+    color: #555;
+    font-style: italic;
+}
+
+.content p {
+    color: #333;
+    line-height: 1.5;
+}
+
+nav{
+    position: fixed;
+    bottom: 40px;
+    left: 0;
+    z-index: 99;
+
+}
+
+nav ul{
+    list-style: none;
+    padding-left: 30px;
+    transform: translateX(-160px); 
+     transition: transform 0.4s ease-in;
+}
+nav ul li{
+    color: white;
+    margin: 40px 0 ;
+    cursor: pointer;
+    text-transform: uppercase;
+   
+   
+}
+nav ul li i {
+    font-size: 20px;
+    margin-right: 10px;
+}
+
+#open, 
+#close{
+    cursor: pointer;
+}
+p{
+    text-align: justify;
+    margin: 20px 0;
+}
